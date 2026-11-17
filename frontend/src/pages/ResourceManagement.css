@@ -1,0 +1,26 @@
+.resource-verification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e8e7f0;
+  border-radius: 10px;
+  background: #fafaff;
+  color: #65697e;
+  line-height: 1.5;
+}
+
+.resource-verification input {
+  margin-top: 3px;
+  accent-color: #675dc5;
+}
+
+.resource-verification span {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .resource-verification {
+    font-size: 0.78rem;
+  }
+}

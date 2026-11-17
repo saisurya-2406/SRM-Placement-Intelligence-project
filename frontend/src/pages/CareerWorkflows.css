@@ -1,0 +1,561 @@
+.career-page,
+.career-section,
+.career-section > *,
+.career-section-head > * {
+  min-width: 0;
+}
+
+.career-tabs {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.career-tabs button {
+  flex: 0 0 auto;
+}
+
+.readiness-overview {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.intelligence-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.intelligence-panel,
+.intelligence-recommendations {
+  min-width: 0;
+  padding: clamp(16px, 2.5vw, 22px);
+}
+
+.intelligence-panel h3,
+.intelligence-recommendations h3 {
+  margin: 10px 0 6px;
+  color: #25263b;
+}
+
+.intelligence-panel > p,
+.intelligence-detail,
+.intelligence-caveat {
+  color: #73778a;
+  line-height: 1.55;
+}
+
+.intelligence-facts,
+.intelligence-skill-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.intelligence-facts > span,
+.intelligence-skill-columns > div {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #eeedf4;
+  border-radius: 10px;
+  color: #777b8f;
+  font-size: 0.78rem;
+}
+
+.intelligence-facts strong,
+.intelligence-skill-columns strong {
+  display: block;
+  margin-top: 5px;
+  color: #303149;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-skill-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intelligence-skill-columns p {
+  margin: 8px 0 0;
+  color: #72768a;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-detail strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #37384e;
+}
+
+.intelligence-demand {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.intelligence-demand > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #55596e;
+}
+
+.intelligence-demand b {
+  color: #6558c8;
+  white-space: nowrap;
+}
+
+.intelligence-caveat {
+  display: block;
+  margin: 12px 0 18px;
+}
+
+.intelligence-progress {
+  display: grid;
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.intelligence-progress > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #72768a;
+}
+
+.intelligence-progress strong {
+  color: #34354c;
+}
+
+.intelligence-progress > i {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eeedf4;
+}
+
+.intelligence-progress > i > b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #7063cf;
+}
+
+.intelligence-recommendations {
+  margin-top: 14px;
+}
+
+.intelligence-resource-list {
+  display: grid;
+}
+
+.intelligence-resource-list article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #eeedf4;
+}
+
+.intelligence-resource-list article > div,
+.intelligence-resource-list a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.intelligence-resource-list article > div > p {
+  margin: 5px 0 0;
+  color: #777b8f;
+  font-size: 0.8rem;
+}
+
+.intelligence-resource-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.career-section-head .career-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mock-interview-form,
+.proficiency-form,
+.proficiency-panel,
+.interview-result,
+.readiness-proficiency {
+  border: 1px solid #e8e7f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 26px #2523440a;
+}
+
+.mock-interview-form,
+.proficiency-form,
+.proficiency-panel {
+  padding: clamp(16px, 3vw, 24px);
+}
+
+.mock-interview-form > p,
+.proficiency-panel > .career-section-head p {
+  color: #777b8f;
+  line-height: 1.6;
+}
+
+.mock-question {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.mock-question > span,
+.interview-improvement {
+  color: #6558c8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mock-question > strong {
+  color: #27283d;
+  line-height: 1.55;
+}
+
+.mock-interview-form .textarea {
+  width: 100%;
+  min-width: 0;
+  resize: vertical;
+}
+
+.interview-result {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
+  gap: 22px;
+  padding: clamp(18px, 3vw, 28px);
+  margin-top: 16px;
+}
+
+.interview-score {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  color: #6458c4;
+}
+
+.interview-score strong {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+}
+
+.interview-score span,
+.interview-history-item summary small {
+  color: #818498;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.interview-result > div:last-child > p,
+.interview-result li,
+.interview-answer-review p {
+  color: #707487;
+  line-height: 1.6;
+}
+
+.interview-result details,
+.interview-history-item {
+  border-top: 1px solid #eeedf3;
+  padding: 12px 0;
+}
+
+.interview-result summary,
+.interview-history-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  color: #33344b;
+  font-weight: 650;
+}
+
+.interview-improvement {
+  display: block;
+  margin: 8px 0;
+  color: #73778b;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.interview-history {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.interview-history > div > p {
+  color: #777b8f;
+}
+
+.interview-history-item {
+  padding: 14px;
+  border: 1px solid #e9e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.interview-history-item summary {
+  flex-wrap: wrap;
+}
+
+.interview-answer-review {
+  padding: 14px 0 4px;
+  border-top: 1px solid #f0eff5;
+  margin-top: 12px;
+}
+
+.interview-answer-review > strong {
+  color: #34354c;
+  line-height: 1.5;
+}
+
+.proficiency-form {
+  display: grid;
+  gap: 18px;
+}
+
+.proficiency-form .form-grid {
+  align-items: start;
+}
+
+.proficiency-panel {
+  margin-top: 18px;
+}
+
+.proficiency-panel .career-section-head {
+  align-items: end;
+}
+
+.proficiency-panel .field-label {
+  width: min(100%, 260px);
+}
+
+.proficiency-chart {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.proficiency-chart svg {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  overflow: visible;
+}
+
+.proficiency-gridline {
+  stroke: #ecebf3;
+  stroke-width: 1;
+}
+
+.proficiency-axis {
+  fill: #898da0;
+  font-size: 12px;
+}
+
+.proficiency-line {
+  fill: none;
+  stroke: #6458c4;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.proficiency-point {
+  fill: #fff;
+  stroke: #6458c4;
+  stroke-width: 3;
+}
+
+.proficiency-dates {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #85899c;
+  font-size: 0.76rem;
+}
+
+.proficiency-history-list {
+  display: grid;
+  gap: 8px;
+}
+
+.proficiency-history-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.6fr) repeat(2, minmax(0, 1fr)) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #efeff4;
+  color: #73778b;
+  font-size: 0.85rem;
+}
+
+.proficiency-history-row strong {
+  color: #32344a;
+}
+
+.proficiency-history-row .improved {
+  color: #25866b;
+}
+
+.readiness-proficiency {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.readiness-proficiency p {
+  margin: 8px 0 0;
+  color: #72768a;
+  line-height: 1.5;
+}
+
+.resource-recommended {
+  color: #426d61 !important;
+  background: #e7f4ed;
+}
+
+.role-comparison-picker {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.7fr) minmax(260px, 1fr);
+  gap: 18px;
+  padding: clamp(16px, 2.5vw, 22px);
+  border: 1px solid #e8e7f0;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.role-comparison-picker h3 {
+  margin: 8px 0 6px;
+  color: #25263b;
+}
+
+.role-comparison-picker p,
+.role-comparison-results small {
+  color: #73778a;
+  line-height: 1.5;
+}
+
+.role-checkbox-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.role-checkbox-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #eeedf4;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.role-checkbox-list input,
+.resource-verification input {
+  flex: 0 0 auto;
+  accent-color: #675dc5;
+}
+
+.role-checkbox-list span {
+  min-width: 0;
+}
+
+.role-checkbox-list strong,
+.role-checkbox-list small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.role-checkbox-list small {
+  margin-top: 3px;
+  color: #73778a;
+}
+
+.role-comparison-results {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #eeedf4;
+}
+
+.role-comparison-results > div {
+  min-width: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f8f8fc;
+}
+
+.role-comparison-results strong {
+  color: #34354c;
+}
+
+.role-comparison-results p {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .intelligence-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .intelligence-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intelligence-resource-list article {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .career-section-head .career-actions {
+    justify-content: flex-start;
+  }
+
+  .interview-result {
+    grid-template-columns: 1fr;
+  }
+
+  .proficiency-panel .career-section-head,
+  .readiness-proficiency {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .proficiency-history-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .proficiency-panel .field-label {
+    width: 100%;
+  }
+
+  .role-comparison-picker {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

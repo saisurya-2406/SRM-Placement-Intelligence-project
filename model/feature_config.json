@@ -1,0 +1,439 @@
+{
+  "feature_names": [
+    "cgpa",
+    "coding_skill_score",
+    "aptitude_score",
+    "communication_skill_score",
+    "logical_reasoning_score",
+    "mock_interview_score",
+    "backlogs",
+    "github_repos",
+    "internships_count",
+    "projects_count",
+    "branch_ECE",
+    "branch_EEE",
+    "branch_IT",
+    "role_category_Data Analyst",
+    "role_category_Data Engineer",
+    "role_category_Data Scientist",
+    "role_category_Machine Learning Engineer",
+    "role_category_Python Developer",
+    "work_mode_On-site",
+    "work_mode_Remote"
+  ],
+  "numeric_features": [
+    "cgpa",
+    "coding_skill_score",
+    "aptitude_score",
+    "communication_skill_score",
+    "logical_reasoning_score",
+    "mock_interview_score",
+    "backlogs",
+    "github_repos",
+    "internships_count",
+    "projects_count"
+  ],
+  "categorical_features": {
+    "branch": {
+      "CSE": null,
+      "ECE": "branch_ECE",
+      "EEE": "branch_EEE",
+      "IT": "branch_IT"
+    },
+    "role_category": {
+      "Business Analyst": null,
+      "Data Analyst": "role_category_Data Analyst",
+      "Data Engineer": "role_category_Data Engineer",
+      "Data Scientist": "role_category_Data Scientist",
+      "Machine Learning Engineer": "role_category_Machine Learning Engineer",
+      "Python Developer": "role_category_Python Developer"
+    },
+    "work_mode": {
+      "Hybrid": null,
+      "On-site": "work_mode_On-site",
+      "Remote": "work_mode_Remote"
+    }
+  },
+  "category_encoding_verified": true,
+  "target_column": "suitability_label_synthetic",
+  "target_limitation": "Synthetic suitability label; generation formula unavailable; not actual placement success.",
+  "model_type": "SVM",
+  "selected_model_reason": "Highest mean suitable-class F1 in training-only grouped CV; precision and recall are reported alongside it.",
+  "best_random_forest_parameters": {
+    "class_weight": "balanced",
+    "max_depth": 12,
+    "min_samples_leaf": 3,
+    "n_estimators": 100
+  },
+  "preprocessing": "Training-only feature medians followed by StandardScaler; grouped CV pipelines refit preprocessing within each fold.",
+  "scikit_learn_version": "1.6.1",
+  "evaluation_split": "GroupShuffleSplit(test_size=0.20, random_state=42) grouped by student_id; no student overlap; not stratified by splitter.",
+  "training_rows": 15994,
+  "testing_rows": 4006,
+  "training_students": 14312,
+  "testing_students": 3578,
+  "training_class_counts": {
+    "0": 14703,
+    "1": 1291
+  },
+  "testing_class_counts": {
+    "0": 3686,
+    "1": 320
+  },
+  "selected_model": "SVM",
+  "cross_validation": [
+    {
+      "Model": "SVM",
+      "CV suitable F1": 0.29600049386145644,
+      "CV suitable precision": 0.17795845854466374,
+      "CV suitable recall": 0.8798105762939213,
+      "Best parameters": {}
+    },
+    {
+      "Model": "Random Forest",
+      "CV suitable F1": 0.2937668278458327,
+      "CV suitable precision": 0.19037778540289632,
+      "CV suitable recall": 0.6448272211987871,
+      "Best parameters": {
+        "class_weight": "balanced",
+        "max_depth": 12,
+        "min_samples_leaf": 3,
+        "n_estimators": 100
+      }
+    },
+    {
+      "Model": "Decision Tree",
+      "CV suitable F1": 0.2902886791144254,
+      "CV suitable precision": 0.17291513435824887,
+      "CV suitable recall": 0.9038417274164385,
+      "Best parameters": {}
+    },
+    {
+      "Model": "Gaussian Naive Bayes",
+      "CV suitable F1": 0.20818476529299057,
+      "CV suitable precision": 0.16129139824302227,
+      "CV suitable recall": 0.2952390346567478,
+      "Best parameters": {}
+    },
+    {
+      "Model": "KNN",
+      "CV suitable F1": 0.15371631109658077,
+      "CV suitable precision": 0.34265837179744457,
+      "CV suitable recall": 0.09973649306797105,
+      "Best parameters": {}
+    }
+  ],
+  "evaluation_metrics": [
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.646280579131303,
+      "Precision": 0.17525162818235643,
+      "Recall": 0.925,
+      "F1 Score": 0.2946739671478347,
+      "Macro F1": 0.5293126624011704,
+      "Weighted F1": 0.7264653953574179,
+      "Balanced Accuracy": 0.7735417797069994,
+      "ROC-AUC": 0.817638530927835,
+      "PR-AUC": 0.2691644156982317
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.7116824762855717,
+      "Precision": 0.18154080854309687,
+      "Recall": 0.74375,
+      "F1 Score": 0.2918454935622318,
+      "Macro F1": 0.5554196908337722,
+      "Weighted F1": 0.7768851796046172,
+      "Balanced Accuracy": 0.7263242674986435,
+      "ROC-AUC": 0.821752916440586,
+      "PR-AUC": 0.277418153100953
+    },
+    {
+      "Model": "SVM",
+      "Accuracy": 0.6622566150773839,
+      "Precision": 0.18136952498457742,
+      "Recall": 0.91875,
+      "F1 Score": 0.3029366306027821,
+      "Macro F1": 0.5400369201440858,
+      "Weighted F1": 0.739257982200009,
+      "Balanced Accuracy": 0.7793695740640261,
+      "ROC-AUC": 0.807531029571351,
+      "PR-AUC": 0.20662725290558548
+    },
+    {
+      "Model": "KNN",
+      "Accuracy": 0.9118821767348977,
+      "Precision": 0.33980582524271846,
+      "Recall": 0.109375,
+      "F1 Score": 0.16548463356973994,
+      "Macro F1": 0.5594849706259557,
+      "Weighted F1": 0.8905396722063907,
+      "Balanced Accuracy": 0.5454634088442756,
+      "ROC-AUC": 0.7153295408301682,
+      "PR-AUC": 0.1810048291900111
+    },
+    {
+      "Model": "Gaussian Naive Bayes",
+      "Accuracy": 0.8142785821268098,
+      "Precision": 0.1513157894736842,
+      "Recall": 0.2875,
+      "F1 Score": 0.19827586206896552,
+      "Macro F1": 0.546625226347865,
+      "Weighted F1": 0.8393221709716233,
+      "Balanced Accuracy": 0.573755425935974,
+      "ROC-AUC": 0.7603779503526857,
+      "PR-AUC": 0.1641125375973109
+    }
+  ],
+  "confusion_matrices": {
+    "Decision Tree": [
+      [
+        2293,
+        1393
+      ],
+      [
+        24,
+        296
+      ]
+    ],
+    "Random Forest": [
+      [
+        2613,
+        1073
+      ],
+      [
+        82,
+        238
+      ]
+    ],
+    "SVM": [
+      [
+        2359,
+        1327
+      ],
+      [
+        26,
+        294
+      ]
+    ],
+    "KNN": [
+      [
+        3618,
+        68
+      ],
+      [
+        285,
+        35
+      ]
+    ],
+    "Gaussian Naive Bayes": [
+      [
+        3170,
+        516
+      ],
+      [
+        228,
+        92
+      ]
+    ]
+  },
+  "classification_reports": {
+    "Decision Tree": {
+      "Unsuitable": {
+        "precision": 0.9896417781614156,
+        "recall": 0.622083559413999,
+        "f1-score": 0.7639513576545061,
+        "support": 3686.0
+      },
+      "Suitable": {
+        "precision": 0.17525162818235643,
+        "recall": 0.925,
+        "f1-score": 0.2946739671478347,
+        "support": 320.0
+      },
+      "accuracy": 0.646280579131303,
+      "macro avg": {
+        "precision": 0.5824467031718861,
+        "recall": 0.7735417797069994,
+        "f1-score": 0.5293126624011704,
+        "support": 4006.0
+      },
+      "weighted avg": {
+        "precision": 0.9245881466104174,
+        "recall": 0.646280579131303,
+        "f1-score": 0.7264653953574179,
+        "support": 4006.0
+      }
+    },
+    "Random Forest": {
+      "Unsuitable": {
+        "precision": 0.9695732838589981,
+        "recall": 0.708898534997287,
+        "f1-score": 0.8189938881053126,
+        "support": 3686.0
+      },
+      "Suitable": {
+        "precision": 0.18154080854309687,
+        "recall": 0.74375,
+        "f1-score": 0.2918454935622318,
+        "support": 320.0
+      },
+      "accuracy": 0.7116824762855717,
+      "macro avg": {
+        "precision": 0.5755570462010475,
+        "recall": 0.7263242674986435,
+        "f1-score": 0.5554196908337722,
+        "support": 4006.0
+      },
+      "weighted avg": {
+        "precision": 0.9066251080973684,
+        "recall": 0.7116824762855717,
+        "f1-score": 0.7768851796046172,
+        "support": 4006.0
+      }
+    },
+    "SVM": {
+      "Unsuitable": {
+        "precision": 0.9890985324947589,
+        "recall": 0.6399891481280521,
+        "f1-score": 0.7771372096853896,
+        "support": 3686.0
+      },
+      "Suitable": {
+        "precision": 0.18136952498457742,
+        "recall": 0.91875,
+        "f1-score": 0.3029366306027821,
+        "support": 320.0
+      },
+      "accuracy": 0.6622566150773839,
+      "macro avg": {
+        "precision": 0.5852340287396681,
+        "recall": 0.7793695740640261,
+        "f1-score": 0.5400369201440858,
+        "support": 4006.0
+      },
+      "weighted avg": {
+        "precision": 0.9245769942013845,
+        "recall": 0.6622566150773839,
+        "f1-score": 0.739257982200009,
+        "support": 4006.0
+      }
+    },
+    "KNN": {
+      "Unsuitable": {
+        "precision": 0.9269792467332821,
+        "recall": 0.9815518176885513,
+        "f1-score": 0.9534853076821715,
+        "support": 3686.0
+      },
+      "Suitable": {
+        "precision": 0.33980582524271846,
+        "recall": 0.109375,
+        "f1-score": 0.16548463356973994,
+        "support": 320.0
+      },
+      "accuracy": 0.9118821767348977,
+      "macro avg": {
+        "precision": 0.6333925359880003,
+        "recall": 0.5454634088442756,
+        "f1-score": 0.5594849706259557,
+        "support": 4006.0
+      },
+      "weighted avg": {
+        "precision": 0.8800757282916994,
+        "recall": 0.9118821767348977,
+        "f1-score": 0.8905396722063907,
+        "support": 4006.0
+      }
+    },
+    "Gaussian Naive Bayes": {
+      "Unsuitable": {
+        "precision": 0.9329017068864037,
+        "recall": 0.8600108518719479,
+        "f1-score": 0.8949745906267645,
+        "support": 3686.0
+      },
+      "Suitable": {
+        "precision": 0.1513157894736842,
+        "recall": 0.2875,
+        "f1-score": 0.19827586206896552,
+        "support": 320.0
+      },
+      "accuracy": 0.8142785821268098,
+      "macro avg": {
+        "precision": 0.542108748180044,
+        "recall": 0.573755425935974,
+        "f1-score": 0.546625226347865,
+        "support": 4006.0
+      },
+      "weighted avg": {
+        "precision": 0.8704684833287227,
+        "recall": 0.8142785821268098,
+        "f1-score": 0.8393221709716233,
+        "support": 4006.0
+      }
+    }
+  },
+  "artifact_prediction_parity": {
+    "Decision Tree": true,
+    "Random Forest": true,
+    "SVM": true,
+    "KNN": true,
+    "Gaussian Naive Bayes": true
+  },
+  "kmeans": {
+    "selected_k": 6,
+    "diagnostics": [
+      {
+        "k": 2,
+        "inertia": 292375.87709255307,
+        "silhouette": 0.16960786676723133
+      },
+      {
+        "k": 3,
+        "inertia": 269221.2946200847,
+        "silhouette": 0.10519494619666157
+      },
+      {
+        "k": 4,
+        "inertia": 251342.4748733343,
+        "silhouette": 0.1297496361258341
+      },
+      {
+        "k": 5,
+        "inertia": 234394.28210678636,
+        "silhouette": 0.1577310936029123
+      },
+      {
+        "k": 6,
+        "inertia": 218063.50826867236,
+        "silhouette": 0.1793174215104299
+      }
+    ]
+  },
+  "pca": {
+    "explained_variance_ratio": [
+      0.09749572874851818,
+      0.08340892650608997,
+      0.06045027592440429,
+      0.05969729012506981,
+      0.058008364560131524,
+      0.05371045779368142,
+      0.05177263426786774,
+      0.051407004376830163,
+      0.05076724468922345,
+      0.050397376894545674,
+      0.05007488126384718,
+      0.04975839566575281,
+      0.04951155286032705,
+      0.04900377101478565,
+      0.048433632076438915,
+      0.04838103987299175,
+      0.04720092663308333,
+      0.02612309887834923,
+      0.010030006792046728,
+      0.004367391056014964
+    ],
+    "components_for_80_percent": 14
+  }
+}

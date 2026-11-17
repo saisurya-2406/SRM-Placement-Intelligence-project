@@ -1,0 +1,14 @@
+.page-loading {
+  display: flex;
+  min-height: 120px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #777b8f;
+  font-size: 0.9rem;
+}
+
+:focus-visible {
+  outline: 3px solid #7d71df;
+  outline-offset: 3px;
+}

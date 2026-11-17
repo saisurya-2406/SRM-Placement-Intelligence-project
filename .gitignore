@@ -1,0 +1,13 @@
+frontend/node_modules/
+frontend/dist/
+backend/__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/*.sqlite3
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+data/*.csv
+data/dataset_index.json
+.env
